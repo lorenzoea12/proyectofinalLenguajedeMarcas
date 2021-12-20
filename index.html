@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos paisajes</title>
+    
+<style>
+
+        #body{
+            background-color: black;
+            overflow: hidden;
+        }
+
+       #contenedor{
+          display: block;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          background-color: black;
+       }
+      
+            
+            
+            
+        #fotosPaisajes {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            object-fit: cover 
+        }
+
+        @media screen and (orientation:landscape) {
+            #paisajes{
+                width: 1440px;
+                height: 900px;
+            }
+        }
+        @media screen and (orientation:portrait) {
+            #paisajes {
+                width: 250px;
+                height: 450px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>LorenzoProyectoImagnes </h1>
+    <div id="contenedor">
+
+        <picture id="portaImagenes">                                                          
+             <source media="(orientation: portrait) and (min-width: 1200px)" srcset="./foto1/foto1vertical1200.heic"type="image/heic">
+             <source media="(orientation: portrait) and (min-width: 1200px)" srcset="./foto1/foto1vertical1200.webp"type="image/webp">
+             <source media="(orientation: portrait) and (min-width: 1200px)" srcset="./foto1/foto1vertical1200.jpg"type="image/jpg">
+
+             <source media="(orientation: portrait) and (max-width: 600px)" srcset="./foto2/foto2vertical.heic"type="image/heic">
+             <source media="(orientation: portrait) and (max-width: 600px)" srcset="./foto2/foto2vertical.webp"type="image/webp">
+             <source media="(orientation: portrait) and (max-width: 600px)" srcset="./foto2/foto2vertical.jpg"type="image/jpg">
+
+             <source media="(orientation: landscape) and (min-width: 1920px)" srcset="./foto3/foto3horizontal.heic"type="image/heic">
+             <source media="(orientation: landscape) and (min-width: 1920px)" srcset="./foto3/foto3horizontal.webp"type="image/webp">
+              <source media="(orientation: landscape) and (min-width: 1920px)" srcset="./foto3/foto3horizontal.jpg"type="image/jpg">
+        
+             <source media="(orientation: landscape) and (max-width: 800px)" srcset="./foto4/foto4horizontal.heic"type="image/heic">
+             <source media="(orientation: landscape) and (max-width: 800px)" srcset="./foto4/foto4horizontal.webp"type="image/webp">
+             <source media="(orientation: landscape) and (max-width: 800px)" srcset="./foto4/foto4horizontal.jpg"type="image/jpg">
+        
+        <img
+            id="fotosPaisajes"
+            alt="fotos de paisajes" 
+            title=" Paisajes "
+            src="./foto1/foto1vertical1200.jpeg">
+
+        </picture>
+    </div>  
+    
+    
+</body>
+</html>
